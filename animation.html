@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character set and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the document -->
+    <title>Spinning Dots Animation</title>
+</head>
+<style>
+    /* Styles for the rotating div */
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: #ffffff; /* Set background color of the div */
+        border: 12px solid rgb(0, 0, 0); /* Set border style and color */
+        border-radius: 100%; /* Make the div a perfect circle with border-radius */
+        margin-left: 250px; /* Set left margin */
+        margin-top: 200px; /* Set top margin */
+        border-left-color: transparent; /* Hide left border */
+        border-right-color: transparent; /* Hide right border */
+        border-top-color: transparent; /* Hide top border */
+        animation-name: spin; /* Apply the spin animation */
+        animation-duration: 10s; /* Set animation duration to 10 seconds */
+        animation-iteration-count: infinite; /* Make the animation repeat infinitely */
+    }
+
+    /* Styles for the dots inside the div */
+    div span {
+        background-color: black; /* Set background color of the dot */
+        width: 95px; /* Set width of the dot */
+        height: 20px; /* Set height of the dot */
+        position: absolute; /* Position the dot absolutely within the div */
+        margin: 90px; /* Set margin for positioning */
+        margin-left: 1px; /* Adjust left margin for the second dot */
+        border-radius: 50%; /* Make the dot a perfect circle with border-radius */
+        color: rgb(1, 1, 2); /* Set color of the dot (this seems to be the text color) */
+        font-size: 200px; /* Set font size of the dot (this seems to be the text size) */
+        text-align: center; /* Center-align the text within the dot */
+    }
+
+    /* Styles for the second dot */
+    div span + span {
+        background-color: black; /* Set background color of the dot */
+        width: 95px; /* Set width of the dot */
+        height: 20px; /* Set height of the dot */
+        position: absolute; /* Position the dot absolutely within the div */
+        margin: 90px; /* Set margin for positioning */
+        margin-left: 100px; /* Adjust left margin for the second dot */
+        border-radius: 50%; /* Make the dot a perfect circle with border-radius */
+    }
+
+    /* Keyframes for the spin animation */
+    @keyframes spin {
+        0%   { transform: rotate(0deg); } /* Rotate 0 degrees at the start */
+        50%  { transform: rotate(180deg); } /* Rotate 180 degrees at the midpoint */
+        100% { transform: rotate(360deg); } /* Rotate 360 degrees at the end, completing a full circle */
+    }
+</style>
+<body>
+    <!-- Container div with spinning dots -->
+    <div>
+        <!-- Dots represented by spans -->
+        <span>.</span>
+        <span>.</span>
+    </div>
+</body>
+</html>
